@@ -8,6 +8,13 @@ export default defineConfig(({ mode }) => {
       server: {
         port: 3000,
         host: '0.0.0.0',
+        allowedHosts: [
+          'gm-portfolio-site-1.onrender.com' // Add your Render URL here
+        ],
+        cors: {
+            origin: "https://gm-portfolio-site-1.onrender.com",
+            methods: ["GET", "POST"],
+          }
       },
       plugins: [react()],
       define: {
