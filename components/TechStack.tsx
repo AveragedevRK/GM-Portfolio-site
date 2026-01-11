@@ -3,9 +3,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import {
   SiNodedotjs, SiExpress, SiNestjs, SiPython, SiDjango, SiFlask, SiFastapi,
   SiReact, SiVuedotjs, SiAngular, SiNextdotjs, SiGatsby,
-  SiPostgresql, SiMongodb, SiMicrosoftsqlserver, SiSupabase,
-  SiFirebase, SiGooglecloud, SiAmazonaws, SiServerless
+  SiPostgresql, SiMongodb, SiMysql, SiSupabase,
+  SiFirebase, SiGooglecloud, SiServerless // Removed SiAmazonaws
 } from 'react-icons/si';
+
+import { FaAws } from "react-icons/fa"; // Added FaAws
 
 interface Tool {
   name: string;
@@ -42,14 +44,20 @@ const TECH_CATEGORIES: { title: string; tools: Tool[] }[] = [
     tools: [
       { name: "PostgreSQL", icon: SiPostgresql, desc: "Advanced relational reliability", color: "#4169E1" },
       { name: "MongoDB", icon: SiMongodb, desc: "Flexible document storage", color: "#47A248" },
-      { name: "MS SQL", icon: SiMicrosoftsqlserver, desc: "Enterprise data warehousing", color: "#CC2927" },
+      { name: "MS SQL", icon: SiMysql , desc: "Enterprise data warehousing", color: "#CC2927" },
       { name: "Supabase", icon: SiSupabase, desc: "Real-time open source backend", color: "#3ECF8E" },
     ]
   },
+  // ... inside TECH_CATEGORIES array
   {
     title: "Cloud & Infra",
     tools: [
-      { name: "AWS", icon: SiAmazonaws, desc: "Scalable cloud infrastructure", color: "#FF9900" },
+      { 
+        name: "AWS", 
+        icon: FaAws, // Updated from SiAmazonaws to FaAws
+        desc: "Scalable cloud infrastructure", 
+        color: "#FF9900" 
+      },
       { name: "GCP", icon: SiGooglecloud, desc: "Google-scale computing", color: "#4285F4" },
       { name: "Firebase", icon: SiFirebase, desc: "Rapid backend development", color: "#FFCA28" },
       { name: "Serverless", icon: SiServerless, desc: "Event-driven architecture", color: "#FD5750" },
