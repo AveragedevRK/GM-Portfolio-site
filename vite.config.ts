@@ -9,7 +9,8 @@ export default defineConfig(({ mode }) => {
         port: 3000,
         host: '0.0.0.0',
         allowedHosts: [
-          'gm-portfolio-site-1.onrender.com' // Add your Render URL here
+          'gm-portfolio-site-1.onrender.com',
+        'https://gmidreesi.dev/'
         ],
         cors: {
             origin: "https://gm-portfolio-site-1.onrender.com",
